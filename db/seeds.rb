@@ -5,15 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Strain.destroy_all
-Wine.destroy_all
 
-10.times do |x|
-    Strain.create(name: "cepa #{x+1}")
-end
-
-10.times do |w|
-    Wine.create(name: "vino #{w+1}")
-end
+movies = Strain.create([{ name: 'Merlot'}, {name: 'Carmenere'}, {name: 'Cabernet Souvignon'}, {name: 'Chardonnay'}])
 
 

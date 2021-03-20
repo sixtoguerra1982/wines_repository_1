@@ -16,7 +16,7 @@
       <tr>
         <td><%= wine.name %></td>
         <td>
-          <% wine.wine_strains.each do |wine_strain| %>
+          <% WineStrain.where(wine_id: wine.id).each do |wine_strain| %>
             <li><%= wine_strain.strain.name %><%= " (#{wine_strain.percentage}%)" %></li>
           <% end %>
         </td>
