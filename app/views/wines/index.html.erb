@@ -16,8 +16,8 @@
       <tr>
         <td><%= wine.name %></td>
         <td>
-          <% wine.strains.each do |strain| %>
-            <li><%= strain.name %></li>
+          <% wine.wine_strains.each do |wine_strain| %>
+            <li><%= wine_strain.strain.name %><%= " (#{wine_strain.percentage}%)" %></li>
           <% end %>
         </td>
         <td><%= link_to 'Show', wine %></td>
